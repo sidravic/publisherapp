@@ -1,0 +1,10 @@
+== Working with RabbitMQ running within Rails
+
+The application runs the reactor as a separate thread and is launched using the Unicorn configuration file.
+Check <tt> config/unicorn.rb </tt>.
+
+The messages published on next_tick are to verify if the setup is working. The actually messages would be 
+published as a result of some user interaction. In this case a <tt> GET </tt> request to <tt> /posts </tt>
+would trigger a message publish.
+
+Check <tt> app/models/message.rb </tt> 
