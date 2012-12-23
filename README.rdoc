@@ -8,3 +8,7 @@ published as a result of some user interaction. In this case a <tt> GET </tt> re
 would trigger a message publish.
 
 Check <tt> app/models/message.rb </tt> 
+
+<tt>To start the application run unicorn -p 3000 -e <environment> -c config/unicorn -D </tt>
+
+You may have to reverse proxy this to Nginx or Apache to run on staging/production.
